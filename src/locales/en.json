@@ -1,5 +1,6 @@
 {
-    
+    "certs-heading" : "Certificated by",
+
     "app.cta.text" : "Contact us today",
     "app.cta.phone" : "Phone *",
     "app.cta.name" : "Name *",
@@ -9,5 +10,7 @@
     "app.cta.inmigration" : "Inmigration",
     "app.cta.other" : "Other",
     "app.cta.comment" : "Comment",
-    "app.cta.submit" : "Submit"
+    "app.cta.submit" : "Submit",
+
+    "footerRights" : " All rights reserved"
 }

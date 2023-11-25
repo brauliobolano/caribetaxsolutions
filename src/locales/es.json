@@ -1,6 +1,7 @@
 {
+    "certs-heading" : "Certificado por",
+
     "app.cta.text": "Contáctanos hoy",
-    "app.cta.submit" : "Enviar",
     "app.cta.phone" : "Teléfono*",
     "app.cta.name" : "Nombre *",
     "app.cta.state" : "Estado *",
@@ -8,5 +9,8 @@
     "app.cta.translation" : "Traducción",
     "app.cta.inmigration" : "Tramite migratorio",
     "app.cta.other" : "Otro",
-    "app.cta.comment" : "Commentario"
+    "app.cta.comment" : "Commentario",
+    "app.cta.submit" : "Enviar",
+
+    "footerRights" : " Derechos reservados"
 }
