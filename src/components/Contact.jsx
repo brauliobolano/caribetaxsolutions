@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { encode, validateEmail, validatePhone } from "../../utils/Misc";
 import { IMaskInput } from "react-imask";
+import { FormattedMessage } from 'react-intl'; //language translation library
 
 export default function Contact() {
   const [status, setStatus] = useState("empty"); //empty, submitting, success
@@ -75,7 +76,12 @@ export default function Contact() {
         <div className="cta">
           <div className="cta-additional">
             <div>
-              <p className="cta-heading text-center">Contáctanos hoy</p>
+              <p className="cta-heading text-center">
+                <FormattedMessage  /* language translation library element */
+                  id="app.cta.text"
+                  defaultMessage="Contáctanos hoy." 
+                />
+              </p>
               <div className="cta-list-box">
                 <ul className="cta-list">
                   <li className="cta-list-item">
@@ -114,7 +120,12 @@ export default function Contact() {
               onSubmit={handleSubmit}
             >
               <div>
-                <label htmlFor="name">Nombre *</label>
+                <label htmlFor="name">
+                  <FormattedMessage  /* language translation library element */
+                      id="app.cta.name"
+                      defaultMessage="Nombre *"
+                    />
+                </label>
                 <input
                   type="text"
                   required
@@ -156,7 +167,12 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="phone">Teléfono*</label>
+                <label htmlFor="phone">
+                    <FormattedMessage /* language translation library element */
+                      id="app.cta.phone"
+                      defaultMessage="Teléfono *"
+                    />
+                </label>
                 {/* <input
                   type="tel"
                   required
@@ -193,7 +209,12 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="state">Estado *</label>
+                <label htmlFor="state">
+                    <FormattedMessage /* language translation library element */
+                      id="app.cta.state"
+                      defaultMessage="Estado *"
+                    />
+                </label>
                 <select
                   id="state"
                   name="state"
@@ -267,7 +288,12 @@ export default function Contact() {
 
               <div>
                 <fieldset>
-                  <legend>Estoy interesado en *</legend>
+                  <legend>
+                      <FormattedMessage  /* language translation library element */
+                        id="app.cta.interested"
+                        defaultMessage="Estoy interesado en *"
+                      />
+                  </legend>
 
                   <div className="grid--checkbox">
                     <input type="checkbox" id="taxes" name="taxes" />
@@ -279,7 +305,12 @@ export default function Contact() {
                       id="translation"
                       name="translation"
                     />
-                    <label htmlFor="translation">Traducción</label>
+                    <label htmlFor="translation">
+                        <FormattedMessage  /* language translation library element */
+                          id="app.cta.translation"
+                          defaultMessage="Traducción"
+                        />
+                    </label>
                   </div>
                   <div className="grid--checkbox">
                     <input
@@ -287,16 +318,30 @@ export default function Contact() {
                       id="inmigration"
                       name="inmigration"
                     />
-                    <label htmlFor="inmigration">Tramite migratorio</label>
+                    <label htmlFor="inmigration">
+                        <FormattedMessage  /* language translation library element */
+                          id="app.cta.inmigration"
+                          defaultMessage="Tramite migratorio"
+                        />
+                    </label>
                   </div>
                   <div className="grid--checkbox">
                     <input type="checkbox" id="other" name="other" />
-                    <label htmlFor="other">Otro servicio</label>
+                    <label htmlFor="other">
+                        <FormattedMessage  /* language translation library element */
+                          id="app.cta.other"
+                          defaultMessage="Otros servicios"
+                        /></label>
                   </div>
                 </fieldset>
               </div>
               <div>
-                <label htmlFor="comment">Comentario</label>
+                <label htmlFor="comment">
+                    <FormattedMessage  /* language translation library element */
+                      id="app.cta.comment"
+                      defaultMessage="Comentario"
+                    />  
+                </label>
                 <textarea
                   name="comment"
                   id="comment"
@@ -306,7 +351,12 @@ export default function Contact() {
                   onChange={(e) => setComment(e.target.value)}
                 ></textarea>
               </div>
-              <button className="btn btn--form">Enviar</button>
+              <button className="btn btn--form">
+                  <FormattedMessage  /* language translation library element */
+                    id="app.cta.submit"
+                    defaultMessage="Enviar"
+                  />
+              </button>
             </form>
           </div>
         </div>

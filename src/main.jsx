@@ -28,6 +28,11 @@ switch (local) { //switch case to set the language
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <IntlProvider locale={local} messages={language}> 
+    {/* language translation library 
+    IntlProvider is a component that provides React context for react-intl. 
+    */}
+      <App />  
+    </IntlProvider>
   </React.StrictMode>
 );
