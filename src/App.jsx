@@ -6,6 +6,8 @@ import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import Navigation from "./components/Navigation";
 import Services from "./components/Services";
+import { FormattedMessage } from "react-intl"; // language translation library 
+
 
 function App() {
   return (
