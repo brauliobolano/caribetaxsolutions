@@ -9,7 +9,6 @@
     font-size: 4.4rem;
   }
 }
-
 /***********************************************************************/
 /*    BELLOW 1200px (Landscape Tablets)     */
 /***********************************************************************/
@@ -40,6 +39,35 @@
   .heading-tertiary {
     font-size: 2.4rem;
   }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  /*---------------------------------------*/
+  /*    NAVIGATION     */
+  /*---------------------------------------*/
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  /*---------------------------------------*/
+  /*    CALL TO ACTION (CTA) SECTION     */
+  /*---------------------------------------*/
+  .cta {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  /*---------------------------------------*/
+  /*    CTA SECTION     */
+  /*---------------------------------------*/
+  .cta-heading {
+    font-size: 2.4rem;
+  }
+
+  .cta-list-link {
+    font-size: 1.6rem;
+  }
 }
 
 /***********************************************************************/
@@ -57,7 +85,7 @@
   /*    CALL TO ACTION (CTA) SECTION     */
   /*---------------------------------------*/
   .cta {
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 3fr;
   }
 
   .cta-form {
@@ -66,6 +94,77 @@
 
   .cta-form .btn {
     margin-top: 1.2rem;
+  }
+
+  /*---------------------------------------*/
+  /*    FEATURES SECTION     */
+  /*---------------------------------------*/
+  .features-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+  }
+
+  /*---------------------------------------*/
+  /*    MOBILE NAVIGATION     */
+  /*---------------------------------------*/
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* display: none; <-- Allows NO transitions at all */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse & keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .open-nav .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .open-nav .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .open-nav .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
   }
 }
 
@@ -84,6 +183,35 @@
   .heading-secondary {
     margin-bottom: 4.8rem;
   }
+
+  /*---------------------------------------*/
+  /*    HOW IT WORKS SECTION   */
+  /*---------------------------------------*/
+  .grid-how {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    row-gap: 6rem;
+  }
+
+  .how-img {
+    width: 35%;
+  }
+
+  .how-heading,
+  .how-text {
+    text-align: center;
+  }
+
+  .how-heading {
+    margin-top: 1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .how-text {
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 /***********************************************************************/
@@ -93,6 +221,10 @@
   /*---------------------------------------*/
   /*    REUSABLE COMPONENTS     */
   /*---------------------------------------*/
+  .heading-primary {
+    font-size: 3rem;
+  }
+
   .grid {
     row-gap: 4.8rem;
   }
@@ -110,6 +242,22 @@
   }
 
   /*---------------------------------------*/
+  /*    HERO SECTION     */
+  /*---------------------------------------*/
+  .hero-text {
+    font-size: 1.4rem;
+  }
+
+  /*---------------------------------------*/
+  /*    FEATURES SECTION     */
+  /*---------------------------------------*/
+  .features-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+
+  /*---------------------------------------*/
   /*    CALL TO ACTION (CTA) SECTION     */
   /*---------------------------------------*/
   .cta {
@@ -120,8 +268,15 @@
     padding: 3.2rem;
   }
 
-  .cta-img-box {
-    height: 32rem;
-    grid-row: 1;
+  .cta-additional {
+    padding-bottom: 0;
+  }
+
+  .cta-list-box {
+    padding: 4rem 3rem;
+  }
+
+  .cta-text-box {
+    padding-top: 1.2rem;
   }
 }

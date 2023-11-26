@@ -1,0 +1,16 @@
+{
+    "certs-heading" : "Certificated by",
+
+    "app.cta.text" : "Contact us today",
+    "app.cta.phone" : "Phone *",
+    "app.cta.name" : "Name *",
+    "app.cta.state" : "State *",
+    "app.cta.interested" : "I'm interested in *",
+    "app.cta.translation" : "Translations",
+    "app.cta.inmigration" : "Inmigration",
+    "app.cta.other" : "Other",
+    "app.cta.comment" : "Comment",
+    "app.cta.submit" : "Submit",
+
+    "footerRights" : " All rights reserved"
+}
